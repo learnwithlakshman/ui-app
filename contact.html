@@ -1,42 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Java Script Operators</title>
-  </head>
-  <body>
-    
+</head>
+
+<body>
+
     <div class="py-2 bg-danger text-white">
         <h1 class="display-5 text-center">Java Script CRUD application</h1>
-        <p class="lead text-center">Application to perform CRUD operations using object oriented concepts and localstorage</p>
+        <p class="lead text-center">Application to perform CRUD operations using object oriented concepts and
+            localstorage</p>
     </div>
     <a href="index.html" class="ml-2"><i class="fa fa-home"></i></a>
     <div class="container mt-2">
         <div class="row">
             <div class="col-md-6">
                 <div id="content">
-                  
+
                 </div>
             </div>
             <div class="col-md-6">
-                <form>
-                    <h1>Add new contact</h1>
+                <form id="contactForm">
+                    <div class="py-2 bg-primary text-white text-center">Add new contact</div>
+                    <div class="form-group">
+                        <label>Enter the name:</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter the name">
+                    </div>
+                    <div class="form-group">
+                        <label>Enter the email:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter the email">
+                    </div>
+                    <div class="form-group">
+                        <label>Enter the age:</label>
+                        <input type="number"  id="age" name="age" class="form-control" placeholder="Enter the age">
+                    </div>
+                    <div class="from-group">
+                        <button class="btn btn-primary" id="btnSubmitAdd" >Submit</button>
+                        <button class="btn btn-primary" id="btnSubmitUpdate">Update</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
     <script src="js/contact.js"></script>
 </body>
+
 </html>

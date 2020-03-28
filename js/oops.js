@@ -46,3 +46,15 @@ students.sort((s1,s2)=>s2.total() - s1.total())
         .map(ele=>ele.name)
         .forEach(name=>console.log(name));
 
+
+
+const book1 = {
+    title:"Let us JS",
+    author:"Rajesh",
+    price:450,
+    showInfo: function(){
+        console.log(`Title ${this.title}\nAuthor :${this.author}\nPrice :${this.price} `)
+    }
+
+}
+book1.showInfo();
