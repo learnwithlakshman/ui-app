@@ -16,7 +16,7 @@ const showPlayerInformation = function(players){
                 `
     })
     data += `</table>`
-    document.querySelector("#tableData").innerHTML
+    document.querySelector("#tableData").innerHTML = data;
 }
 const showTeamDetailInformation = (team)=>{
     console.log(team);
