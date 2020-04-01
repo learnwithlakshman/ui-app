@@ -49,22 +49,26 @@
             <form id="calc">
               <h5 class="bg-danger text-white py-1 px-1">EMI Calculator</h5>
                 <div class="form-group">
-                  <label for="Numer1">Enter the num1:</label>
-                  <input type="number" class="form-control" id="num1" placeholder="Enter the num1:">
+                  <label for="amount">Enter the Amount</label>
+                  <input type="number" class="form-control" id="amount" placeholder="Enter the amount:">
                 </div>
                 <div class="form-group">
-                  <label for="Number2">Enter the num2:</label>
-                  <input type="number" class="form-control" id="num2" placeholder="Enter the num2:">
+                  <label for="time">Enter the Time in months</label>
+                  <input type="number" class="form-control" id="time" placeholder="Enter the Time in months:">
                 </div>
+
+                <div class="form-group">
+                  <label for="rate">Enter the Interst rate (%)</label>
+                  <input type="number" class="form-control" id="rate" placeholder="Enter the %:">
+                </div>
+
                 <div class="form-group row">
                    
-                      <button type="submit" id="sum" class="btn btn-primary ml-3">Addition</button>
-                      <button type="submit" id="sub" class="btn btn-primary ml-1">Substract</button>
-                      <button type="submit" id="mul" class="btn btn-primary ml-1">Multiply</button>
+                      <button type="submit" id="calculateEMI" class="btn btn-primary ml-3">Calculate EMI</button>
                      
                   </div>
                   <div class="form-group">
-                    <input type="text" disabled class="form-control" id="result" placeholder="The result will be displayed here">
+                    <input type="text" disabled class="form-control" id="emiResult" placeholder="The result will be displayed here">
                   </div>
               </form>
           </div>
@@ -74,12 +78,12 @@
             <form id="calc">
               <h5 class="bg-danger text-white py-1 px-1">MS to  Sec,Min,Hours</h5>
                 <div class="form-group">
-                  <label for="ms">Enter the time in ms:</label>
+                  <label for="timeinms">Enter the time in ms:</label>
                   <input type="number" class="form-control" id="timeinms" placeholder="Enter the time in ms:">
                 </div>
                 <div class="form-group">
                   <label for="convertto">Convert</label>
-                  <select class="form-control">
+                  <select class="form-control" id="choice" onchange="convertTo()"> 
                     <option value="">Select options</option>
                     <option value="sec">Seconds</option>
                     <option value="min">Minutes</option>
@@ -89,7 +93,7 @@
                 </div>
                
                   <div class="form-group">
-                    <input type="text" disabled class="form-control" id="result" placeholder="The result will be displayed here">
+                    <input type="text" disabled class="form-control" id="convRes" placeholder="The result will be displayed here">
                   </div>
               </form>
            </div>
