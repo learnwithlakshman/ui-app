@@ -36,25 +36,26 @@ mul.addEventListener('click', (event) => {
 })
 
 
-function getRes(rate,time) {
+function getRes(rate, time) {
     return Math.pow(rate, time);
 }
 
 
 calculateEmi.addEventListener('click', (event) => {
     event.preventDefault();
-    let amount = Number.parseFloat(document.querySelector("#amount").value);
-    let time = Number.parseFloat(document.querySelector("#time").value);
-    let rate = Number.parseFloat(document.querySelector("#rate").value);
+    let amount = Number(document.querySelector("#amount").value);
+    let time = Number(document.querySelector("#time").value);
+    let rate = Number(document.querySelector("#rate").value);
+
+    rate = (rate / (12 * 100));
 
     // formula:  EMI = amount*rate*(1+rate)^time/( ( (1+rate)^time) -1 ) 
 
-    let v = getRes(rate+1,time);
+    let v = getRes(rate + 1, time);
 
-    let emi = ((amount * rate * v) / (v - 1)) 
-                    .toFixed(2);
+    let emi = (amount * (rate * v)) / (v - 1)
 
-    document.querySelector("#emiResult").value = `Your EMI is ${emi}`;
+    document.querySelector("#emiResult").value = `Your EMI is ${emi.toFixed(2)}`;
 })
 
 
@@ -64,15 +65,15 @@ function convertTo() {
     let res = 0;
     if (choice === 'sec') {
 
-        res = time/1000;
+        res = time / 1000;
 
     } else if (choice === 'min') {
 
-        res = time/6000;
+        res = time / 60000;
 
     } else if (choice === 'hrs') {
 
-        res = (time/(1000 * 60 * 60)).toFixed(5);
+        res = (time / (1000 * 60 * 60)).toFixed(5);
 
     }
     document.querySelector("#convRes").value = res;
