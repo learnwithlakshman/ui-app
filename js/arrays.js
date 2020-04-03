@@ -40,8 +40,8 @@ const showResult = () => {
     let data = "<ul class='list-group'>";
     for (let name of names) {
         data += `<li class="list-group-item">${name} 
-        <i class="fa fa-edit  float-right mr-2" onClick=editUser('${name}') ></i>
-        <i class="fa fa-trash float-right mr-2" onClick=deleteUser('${name}')></i>
+        <i class="fa fa-edit  float-right mr-2" onClick="editUser('${name}')" ></i>
+        <i class="fa fa-trash float-right mr-2" onClick="deleteUser('${name}')" ></i>
         </li>`
     }
     data += "</ul>";
