@@ -2,6 +2,15 @@ let labels = [];
 
 const base_url = 'https://ipl2020-stat.herokuapp.com/ipl2020/';
 
+
+const mySpinner = (load) => {
+    const spinner = document.getElementById("myspinner");
+    spinner.style.display = "none";
+    if (load === true) {
+        spinner.style.display = "block";
+    }
+}
+
 const showPlayerInformation = function (players) {
     let tableData = document.querySelector("#tableData");
     let data = `<table class='table table-striped'>
@@ -19,10 +28,12 @@ const showPlayerInformation = function (players) {
                 `
     })
     data += `</table>`
+    mySpinner(false);
     document.querySelector("#tableData").innerHTML = data;
 }
 const showTeamDetailInformation = (team) => {
     console.log(team);
+    mySpinner(true);
     let url = `${base_url}team/${team}`;
     fetch(url)
         .then(response => {
@@ -47,11 +58,13 @@ const showLabels = () => {
         data += `<option value='${ele}'>${ele}</option>`;
     })
     data += '</select>';
+    mySpinner(false);
     document.querySelector("#idLabels").innerHTML = data;
 
 }
 
 const labelInfo = () => {
+    mySpinner(true);
     fetch(`${base_url}team/labels`)
         .then(response => {
             return response.json();
