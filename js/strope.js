@@ -58,8 +58,12 @@ checkEmail.addEventListener('keyup', (event) => {
         if (validateEmail(email))
             div = `<div class='text-success'>Valid Email</div>`;
         else
-            div = `<div class='text-danger'>Not a Valid Email</div>`;
+            div = `<div class='text-danger'>Invalid Email</div>`;
         res.innerHTML = div
+    }
+
+    if (email.trim().length == 0) {
+        res.innerHTML = "";
     }
 
 })
